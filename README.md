@@ -17,9 +17,9 @@ simple http one-pager, with optional assets
 koken (uses snippets for everything)
 ## sites/trwnh.com
 base site running pure html (intentionally doesn't include snippets/php.conf)
-### /known
+### .../known
 proxy pass to apache
-### /portfolio
+### .../portfolio
 redirect to subdomain
-### /october
+### .../october
 php in subdirectory
