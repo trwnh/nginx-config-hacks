@@ -5,7 +5,7 @@ a personal repo of hacks i use to make nginx configs a tiny bit easier to manage
 * root of this repo is /etc/nginx
 * includes site configs in ./sites
 * includes snippets in ./snippets
-* also includes ./httpd if you're proxying to apache
+* also includes ./httpd if you're proxying to apache (which lives in /etc/httpd instead)
 
 # credits / links / resources
 * thanks to https://serversforhackers.com/c/nginx-php-in-subdirectory for the only config posted on the internet that actually works when hosting php apps in a subdirectory
