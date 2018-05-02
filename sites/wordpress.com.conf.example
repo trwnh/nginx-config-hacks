@@ -1,0 +1,18 @@
+server {
+    listen 80;
+    server_name  wordpress.com www.wordpress.com;
+    root   /srv/http/wordpress.com;
+
+    access_log  logs/wordpress.com-access.log  main;
+    error_log   logs/wordpress.com-error.log;
+    
+    location / {
+        index  index.html index.htm index.php;
+        try_files $uri $uri/ /index.php?$args;
+    }
+    
+    error_page 404 /404.html;
+
+    include snippets/php.conf;
+    include snippets/expires.conf;
+}
