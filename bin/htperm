@@ -1,0 +1,16 @@
+#!/bin/bash
+echo "Giving ownership of /srv/http to http:http" 
+chown -R http:http /srv/http
+echo "Applying 775 to all directories..."
+find /srv/http -type d -exec chmod 0775 {} \;
+echo "Applying 664 to all files..."
+find /srv/http -type f -exec chmod 0664 {} \;
+echo "Done setting /srv/http permissions!"
+
+echo "Giving ownership of /usr/share/webapps to http:http"
+chown -R http:http /usr/share/webapps
+echo "Applying 775 to all directories..."
+find /usr/share/webapps -type d -exec chmod 0775 {} \;
+echo "Applying 664 to all files..."
+find /usr/share/webapps -type f -exec chmod 0664 {} \;
+echo "Done setting /usr/share/webapps permissions!"
