@@ -1,0 +1,16 @@
+#!/bin/bash
+echo "Giving ownership of /etc/nginx to root:wheel"
+chown -R root:wheel /etc/nginx
+echo "Applying 775 to all directories..."
+find /etc/nginx -type d -exec chmod 0775 {} \;
+echo "Applying 664 to all files..."
+find /etc/nginx -type f -exec chmod 0664 {} \;
+echo "Done setting /etc/nginx permissions!"
+
+echo "Giving ownership of /usr/share/nginx/html to root:wheel"
+chown -R root:wheel /usr/share/nginx/html
+echo "Applying 775 to all directories..."
+find /usr/share/nginx/html -type d -exec chmod 0775 {} \;
+echo "Applying 664 to all files..."
+find /usr/share/nginx/html -type f -exec chmod 0664 {} \;
+echo "Done setting /usr/share/nginx/html permissions!"
