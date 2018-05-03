@@ -1,0 +1,8 @@
+#!/bin/bash
+echo "Giving ownership of /etc/httpd to root:wheel"
+chown -R root:wheel /etc/httpd
+echo "Applying 775 to all directories..."
+find /etc/httpd -type d -exec chmod 0775 {} \;
+echo "Applying 664 to all files..."
+find /etc/httpd -type f -exec chmod 0664 {} \;
+echo "Done setting /etc/httpd permissions!"
