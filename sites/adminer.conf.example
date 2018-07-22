@@ -1,0 +1,17 @@
+server {
+listen 80;
+server_name adminer.com;
+root /usr/share/webapps/adminer;
+
+access_log logs/adminer-access.log main;
+error_log logs/adminer-error.log;
+
+location / {
+index index.php;
+try_files $uri $uri/ /index.php?$args;
+}
+
+include snippets/php.conf;
+include snippets/norobots.conf;
+include snippets/passwd.conf;
+}
